@@ -11,7 +11,6 @@ def search_openalex_papers(topic: str, limit: int = 10) -> list[Paper]:
     params = {
         "search": topic,
         "per-page": limit,
-        "sort": "cited_by_count:desc",
     }
 
     response = requests.get(
@@ -121,3 +120,16 @@ def _extract_abstract(work: dict) -> str | None:
     ]
 
     return " ".join(ordered_words)
+
+if __name__ == "__main__":
+    papers = search_openalex_papers(
+        topic="retrieval augmented generation",
+        limit=3,
+    )
+
+    for paper in papers:
+        print(paper.title)
+        print(paper.publication_year)
+        print(paper.citation_count)
+        print(paper.url)
+        print()
