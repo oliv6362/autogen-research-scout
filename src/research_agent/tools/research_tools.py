@@ -9,7 +9,7 @@ def search_research_papers(
     year: int | None = None,
     citation_operator: str = "none",
     citation_count: int | None = None,
-    limit: int = 10,
+    limit: int = 25,
 ) -> str:
     """
     Search for academic research papers using the OpenAlex tool and filter them
@@ -28,13 +28,16 @@ def search_research_papers(
     Returns:
         A JSON string containing the applied constraints, valid papers, rejected paper count, and errors.
     """
+
+    search_limit = max(limit, 25)
+
     constraints = SearchConstraints(
         topic=topic,
         year_operator=year_operator,
         year=year,
         citation_operator=citation_operator,
         citation_count=citation_count,
-        limit=limit,
+        limit=search_limit,
     )
 
     result = search_and_filter_papers(constraints)
@@ -51,17 +54,17 @@ def search_research_papers(
         "valid_papers": [
             {
                 "title": paper.title,
-                "authors": paper.authors,
+                "authors": paper.authors[:5],
                 "publication_year": paper.publication_year,
                 "citation_count": paper.citation_count,
                 "citation_source": paper.citation_source,
                 "url": paper.url,
                 "doi": paper.doi,
                 "venue": paper.venue,
-                "abstract": paper.abstract,
+                "abstract": paper.abstract[:800] if paper.abstract else None,
                 "source_api": paper.source_api,
             }
-            for paper in result.valid_papers
+            for paper in result.valid_papers[:3]
         ],
         "rejected_paper_count": len(result.rejected_papers),
         "errors": result.errors,
