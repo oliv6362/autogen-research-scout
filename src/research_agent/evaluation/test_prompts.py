@@ -38,24 +38,24 @@ EVALUATION_PROMPTS = [
         "id": 3,
         "category": "before_year_constraint",
         "prompt": (
-            "Find a paper about retrieval-augmented generation published before 2021 "
+            "Find a paper about BERT language models published before 2020 "
             "with more than 500 citations. Summarize its contribution in 5-7 sentences."
         ),
         "expected_behavior": (
-            "Should find a relevant RAG-related paper before 2021 with more than "
-            "500 citations, or clearly state that no valid paper was found."
+            "Should find a relevant BERT-related paper before 2020 with more than "
+            "500 citations and summarize its contribution."
         ),
     },
     {
         "id": 4,
         "category": "exact_year_constraint",
         "prompt": (
-            "Find a paper about chain-of-thought prompting published in 2022 with "
-            "more than 1000 citations. Explain its main contribution."
+            "Find a paper about chain of thought prompting published in 2022 "
+            "with more than 100 citations. Explain its main contribution."
         ),
         "expected_behavior": (
             "Should find a chain-of-thought paper from exactly 2022 with more than "
-            "1000 citations."
+            "100 citations, or clearly state that no valid paper was found."
         ),
     },
     {
@@ -100,12 +100,12 @@ EVALUATION_PROMPTS = [
         "category": "citation_approximate",
         "prompt": (
             "Find a research paper about LLM agents for software engineering that "
-            "was published after 2022 and has approximately 500 citations. Explain why "
+            "was published after 2022 and has approximately 100 citations. Explain why "
             "the paper is relevant."
         ),
         "expected_behavior": (
             "Should find a paper related to LLM agents or agentic AI in software "
-            "engineering, published after 2022, with approximately 500 citations."
+            "engineering, published after 2022, with approximately 100 citations."
         ),
     },
     {
