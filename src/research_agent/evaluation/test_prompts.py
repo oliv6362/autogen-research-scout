@@ -85,7 +85,7 @@ EVALUATION_PROMPTS = [
     },
     {
         "id": 7,
-        "category": "low_citation_constraint",
+        "category": "low_minimum_citation_constraint",
         "prompt": (
             "Find a paper about software testing with large language models published "
             "after 2023 with at least 10 citations."
