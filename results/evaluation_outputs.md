@@ -22,7 +22,7 @@ Citation count: 630
 Citation source: OpenAlex
 URL: https://openalex.org/W4389984066
 DOI: https://doi.org/10.48550/arxiv.2312.10997
-Why this paper matches the request: This paper, published in 2023, is a comprehensive survey on Retrieval-Augmented Generation (RAG). It meets all the specified criteria: the topic is "retrieval-augmented generation," it was published after 2022, and it has a citation count of 630, which is at least 500. The citation count is sourced from OpenAlex.
+Why this paper matches the request: This paper, published in 2023, is a comprehensive survey on Retrieval-Augmented Generation (RAG), directly addressing the topic. It meets the criteria of being published after 2022 and has a citation count of 630, which is at least 500.
 ```
 
 ## Prompt 2: broad_topic
@@ -68,7 +68,7 @@ Citation count: 6797
 Citation source: OpenAlex
 URL: https://openalex.org/W2911489562
 DOI: https://doi.org/10.1093/bioinformatics/btz682
-Why this paper matches the request: This paper introduces BioBERT, an adaptation of the BERT language model specifically for biomedical text mining. It addresses the word distribution shift that occurs when applying general NLP models to specialized biomedical corpora. By pre-training on biomedical literature, BioBERT significantly improves the performance of downstream tasks like information extraction and relation extraction within the medical domain. The paper demonstrates that this specialized pre-training is crucial for achieving state-of-the-art results in biomedical NLP. The model's high citation count (6797) and publication year (2019) satisfy all the user's constraints (BERT language models, before 2020, >500 citations).
+Why this paper matches the request: This paper introduces BioBERT, an adaptation of the BERT language model specifically for biomedical text. It addresses the word distribution shift that occurs when applying general NLP models to specialized biomedical corpora. By pre-training on biomedical literature, BioBERT significantly improves the performance of downstream tasks like information extraction and text classification within the medical domain. The model leverages the power of bidirectional transformer encoders to capture deep contextual relationships in biomedical language. The high citation count (6797) and publication year (2019) satisfy the constraints of being published before 2020 and having more than 500 citations, while directly focusing on the BERT architecture.
 ```
 
 ## Prompt 4: exact_year_constraint
@@ -91,7 +91,7 @@ Citation count: 293
 Citation source: OpenAlex
 URL: https://openalex.org/W7133224126
 DOI: https://doi.org/10.52202/068431-1800
-Why this paper matches the request: This paper, published in 2022, discusses Chain-of-Thought (CoT) prompting and has 293 citations, which satisfies the constraint of having more than 100 citations. Its main contribution is demonstrating that prompting large language models with chain-of-thought techniques significantly enhances their ability to perform complex reasoning tasks, moving beyond simple pattern matching to exhibit more human-like step-by-step logical deduction.
+Why this paper matches the request: This paper, published in 2022, discusses Chain-of-Thought (CoT) prompting and has a high citation count of 293, satisfying all the user's constraints. Its main contribution is demonstrating that prompting large language models with intermediate reasoning steps (Chain-of-Thought) significantly improves their ability to perform complex reasoning tasks, moving beyond simple question-answering.
 ```
 
 ## Prompt 5: after_year_constraint
@@ -114,7 +114,7 @@ Citation count: 221
 Citation source: OpenAlex
 URL: https://openalex.org/W4403925918
 DOI: https://doi.org/10.1016/j.cell.2024.09.022
-Why this paper matches the request: This paper, published in 2024, discusses "AI agents" and their use in "biomedical discovery," which involves integrating AI models and biomedical tools. The paper has 221 citations, satisfying the requirement of at least 50 citations. It is highly relevant for someone building autonomous software agents because it describes AI agents as systems capable of "skeptical learning and reasoning" that "combine human creativity and expertise with AI's ability to analyze large datasets, navigate hypothesis spaces, and execute repetitive tasks." This suggests a framework for building sophisticated, tool-using, and self-assessing autonomous agents.
+Why this paper matches the request: This paper, published in 2024, discusses "AI scientists" and "biomedical AI agents" that integrate AI models and biomedical tools. It explicitly mentions that these agents are designed to "empower biomedical research" by combining human expertise with AI's ability to analyze large datasets, navigate hypothesis spaces, and execute repetitive tasks. This directly addresses the concept of using AI agents with tools for complex, autonomous tasks, making it highly relevant for someone building autonomous software agents.
 ```
 
 ## Prompt 6: high_citation_constraint
@@ -137,7 +137,7 @@ Citation count: 57488
 Citation source: OpenAlex
 URL: https://openalex.org/W2112796928
 DOI: https://doi.org/10.1109/5.726791
-Why this paper matches the request: The paper was published in 1998, which is before 2018, and it has 57,488 citations, which is more than 10,000. While the title and abstract discuss general neural network concepts rather than specifically "transformer neural networks," it is the only paper returned that meets the strict citation and date constraints, and the underlying technology (gradient-based learning) is foundational to modern transformer architectures.
+Why this paper matches the request: The paper was published in 1998, which is before 2018, and it has 57,488 citations, which is more than 10,000. Although the title and abstract do not explicitly mention "transformer neural networks," the search tool returned this paper as the only valid result matching the strict constraints, and it is a foundational paper in the field of neural networks.
 ```
 
 ## Prompt 7: low_minimum_citation_constraint
@@ -183,7 +183,7 @@ Citation count: 97
 Citation source: OpenAlex
 URL: https://openalex.org/W4406325768
 DOI: https://doi.org/10.1145/3712003
-Why this paper matches the request: This paper directly addresses "LLM-Based Multi-Agent Systems for Software Engineering," which matches the requested topic. It was published in 2025, satisfying the "after 2022" constraint. Furthermore, its citation count of 97 is the closest match to the requested "approximately 100 citations."
+Why this paper matches the request: This paper directly addresses "LLM-Based Multi-Agent Systems for Software Engineering," which matches the requested topic. It was published in 2025, satisfying the "after 2022" constraint. Furthermore, its citation count of 97 is approximately 100, fulfilling the citation requirement.
 ```
 
 ## Prompt 9: expected_failure
@@ -222,6 +222,6 @@ Citation count: 221
 Citation source: OpenAlex
 URL: https://openalex.org/W4403925918
 DOI: https://doi.org/10.1016/j.cell.2024.09.022
-Why this paper matches the request: This paper is highly relevant as it discusses "AI agents" in the context of "biomedical discovery," showing how these agents can integrate AI models and biomedical tools to analyze large datasets, plan discovery workflows, and perform self-assessment. The abstract describes AI agents as systems capable of "skeptical learning and reasoning," which directly addresses the concept of advanced AI agents and is a recent publication (2024).
+Why this paper matches the request: This paper is highly relevant as it discusses "AI agents" in the context of "biomedical discovery," showing how these agents can integrate AI models and biomedical tools to empower research. The abstract details that these agents combine human expertise with AI's ability to analyze large datasets, plan discovery workflows, and perform self-assessment, making it a recent and advanced application of AI agents.
 ```
 
