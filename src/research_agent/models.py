@@ -17,7 +17,7 @@ class SearchConstraints:
     year: int | None = None
     citation_operator: CitationOperator = "none"
     citation_count: int | None = None
-    limit: int = 10
+    limit: int = 25
 
     def has_year_constraint(self) -> bool:
         return self.year_operator != "none" and self.year is not None
