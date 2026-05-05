@@ -7,8 +7,9 @@ A small AutoGen project that uses a local LLM and the OpenAlex API to search for
 The agent can handle requests with:
 - Research topic
 - Publication year constraints
-- Before, after, and exact year comparisons
-- Minimum, maximum, and approximate citation counts
+    - Before, after, and exact year comparisons
+- Citation constraints
+    - Minimum, maximum, and approximate citation counts
 - Cases where no valid paper can be found
 
 ## Evaluation Results
@@ -36,7 +37,7 @@ The project is split into small modules:
 
 The LLM is responsible for understanding the user request, extracting constraints, calling the tool, and writing the final explanation.
 
-The deterministic Python workflow is responsible for enforcing year and citation constraints.
+The deterministic Python workflow is responsible for enforcing publication year and citation-count constraints.
 
 ## Prerequisites
 
@@ -55,7 +56,7 @@ Install dependencies:
 
 Create a local configuration file:
 
-    feedback_agent/config.py
+    src/research_agent/config.py
 
 
 Example local Ollama configuration:
@@ -97,7 +98,7 @@ This creates an evaluation output file at:
 - Broad topics
 - Narrow topics
 - Before, after, and exact year constraints
-- Minimum and approximate citation constraints
+- Minimum, maximum, and approximate citation constraints
 - Ambiguous requests
 - Expected failure cases
 
@@ -108,6 +109,8 @@ This creates an evaluation output file at:
 - Provides a valid source
 - Avoids hallucinated information
 - Gives a useful explanation
+
+Most prompts were handled successfully. The main limitation was topical relevance in one transformer-related prompt, where OpenAlex returned a numerically valid but topically weak result.
 
 ## Reflection
 
@@ -123,8 +126,19 @@ This creates an evaluation output file at:
 - In one case, the LLM set the search limit to 1, which reduced the chance of finding a good result. This was fixed by enforcing a minimum search limit in the tool.
 
 ### Failure case:
+One limitation was observed in the test prompt: *“Find a paper about transformer neural networks published before 2018 with more than 10000 citations.”*
+
+The OpenAlex tool returned *“Gradient-based learning applied to document recognition,”* likely because the abstract contains the phrase “graph transformer networks.” Although the returned paper satisfied the publication year and citation-count constraints, it was not directly related to the modern attention-based Transformer architecture.
+  
+This indicates that the deterministic filtering layer is effective for numeric constraints, but that topical relevance remains dependent on retrieval quality and the ambiguity of the search query.
+
+### Possible future improvements:
+- Improve exact-year constraint extraction.
+- Add relevance validation step before accepting a paper.
+- Add a second source for verification.
+- Improve the evaluation with automated scoring.
 
 
+## Group Members
 
-### Future improvements:
-
+- Oliver Nordby Hansen
