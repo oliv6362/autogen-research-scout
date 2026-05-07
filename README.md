@@ -42,15 +42,22 @@ The deterministic Python workflow is responsible for enforcing publication year 
 ## Prerequisites
 
 - Make sure Ollama is running locally and that you have pulled an Ollama model, for example gemma4:latest.
-- The project was developed using Python 3.12 in a Miniconda environment.
+- The project was developed using Python 3.12 in a Miniconda3 environment.
 
 ## Installation
 
-Create and activate a virtual environment.
+Import a virtual conda environment from YML from the project root folder:
 
-Install dependencies:
+    conda env create --file environment.yml
+    
+Activate a virtual conda environment:
 
-    pip install -r requirements.txt
+    conda activate AutoGenResearchScout
+
+If necessary, how to remove a virtual conda environment:
+
+    conda env remove -n AutoGenResearchScout
+    
 
 ## Configuration
 
